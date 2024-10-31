@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
+  m_Name: RemoteConfigDataStoreAsset
+  m_EditorClassIdentifier: 
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"7663182e-c992-49eb-b765-9451081b7b0b\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"OfferData\",\r\n      \"type\": \"json\",\r\n     
+    \"schemaId\": null,\r\n      \"value\": {\r\n        \"Id\": 0,\r\n        \"Title\":
+    \"Weekend Getaway Package\",\r\n        \"Description\": \"A two-night stay at
+    a luxurious hotel with complimentary breakfast and spa access.\",\r\n       
+    \"Items\": [\r\n          \"Bag\",\r\n          \"Book\",\r\n          \"Greed\",\r\n         
+    \"Guitar\",\r\n          \"Hammer\",\r\n          \"Ink\"\r\n        ],\r\n       
+    \"Price\": 299.99,\r\n        \"DiscountAmount\": 20,\r\n        \"Discounted\":
+    true,\r\n        \"DiscountedPrice\": 239.99,\r\n        \"MainSpriteId\": 0\r\n     
+    }\r\n    }\r\n  }\r\n]"
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"7663182e-c992-49eb-b765-9451081b7b0b\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"OfferData\",\r\n      \"type\": \"json\",\r\n     
+    \"schemaId\": null,\r\n      \"value\": {\r\n        \"Id\": 0,\r\n        \"Title\":
+    \"Weekend Getaway Package\",\r\n        \"Description\": \"A two-night stay at
+    a luxurious hotel with complimentary breakfast and spa access.\",\r\n       
+    \"Items\": [\r\n          \"Bag\",\r\n          \"Book\",\r\n          \"Greed\",\r\n         
+    \"Guitar\",\r\n          \"Hammer\",\r\n          \"Ink\"\r\n        ],\r\n       
+    \"Price\": 299.99,\r\n        \"DiscountAmount\": 20,\r\n        \"Discounted\":
+    true,\r\n        \"DiscountedPrice\": 239.99,\r\n        \"MainSpriteId\": 0\r\n     
+    }\r\n    }\r\n  }\r\n]"
+  _environments: "[\r\n  {\r\n    \"projectId\": \"82f0ead9-71f2-4fd5-858d-d9d1e243304f\",\r\n   
+    \"name\": \"production\",\r\n    \"id\": \"8772fd9e-c51e-4daf-9675-646671cb6aa6\",\r\n   
+    \"isDefault\": true,\r\n    \"createdAt\": \"2024-10-31T17:08:21Z\",\r\n    \"updatedAt\":
+    \"2024-10-31T17:08:21Z\"\r\n  },\r\n  {\r\n    \"projectId\": \"82f0ead9-71f2-4fd5-858d-d9d1e243304f\",\r\n   
+    \"name\": \"development\",\r\n    \"id\": \"b15b9026-16c2-4bf7-9c83-29b25064ab4f\",\r\n   
+    \"isDefault\": false,\r\n    \"createdAt\": \"2024-10-31T18:09:31Z\",\r\n   
+    \"updatedAt\": \"2024-10-31T18:09:31Z\"\r\n  }\r\n]"

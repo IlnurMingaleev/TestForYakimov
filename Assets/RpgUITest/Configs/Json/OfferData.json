@@ -1,0 +1,18 @@
+{
+    "Id": 0,
+    "Title": "Weekend Getaway Package",
+    "Description": "A two-night stay at a luxurious hotel with complimentary breakfast and spa access.",
+    "Items": [
+        "Bag",
+        "Book",
+        "Greed",
+        "Guitar",
+        "Hammer",
+        "Ink"
+    ],
+    "Price": 299.99,
+    "DiscountAmount": 20,
+    "Discounted": true,
+    "DiscountedPrice": 239.99,
+    "MainSpriteId": 0
+}
