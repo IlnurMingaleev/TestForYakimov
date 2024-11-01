@@ -7,22 +7,22 @@ namespace RpgUITest.Controllers
     {
         [SerializeField] private ConfigProvider configProvider;
 
-        [Header("WindowManager")] [SerializeField]
+        [Header("WindowManager")] 
+        [SerializeField]
         private Transform canvasRoot;
-
         [SerializeField] private Transform nonActiveParent;
 
         private MainController _mainController;
 
         private void Awake()
         {
-            configProvider.Init();
-            _mainController = new MainController(configProvider, canvasRoot, nonActiveParent);
+            configProvider.Init(StartGame);
         }
 
-        private void Start()
+        private void StartGame()
         {
-            _mainController.OpenStartWindow();
+            _mainController = new MainController(configProvider, canvasRoot, nonActiveParent);
+            
         }
     }
 }

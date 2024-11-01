@@ -14,7 +14,7 @@ namespace RpgUITest.Controllers
         {
             _configProvider = configProvider;
             _windowManager = new WindowManager(canvasRoot, nonActiveParent);
-            _windowModel = new WindowModel(configProvider.OfferData);
+            _windowModel = new WindowModel(_configProvider.OfferData, OpenStartWindow);
         }
 
         public void OpenStartWindow()

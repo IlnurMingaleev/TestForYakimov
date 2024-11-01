@@ -18,21 +18,17 @@ namespace RpgUITest
         public Dictionary<string, ItemData> ItemsDictionary = new Dictionary<string, ItemData>();
         public Dictionary<int, OfferSpriteData> OfferDataDictionary = new Dictionary<int, OfferSpriteData>();
         public OfferData OfferData => _offerData;
-        [Obsolete("Obsolete")]
+        public Action OnGetConfigSuccess;
         private void FetchOfferData()
         {
             ConfigManager.FetchCompleted += ApplyRemoteSettings;
+            
             ConfigManager.FetchConfigs(new UserAttributes(), new AppAttributes());
         }
 
-        private void OnDestroy()
+        public void Init(Action startGame)
         {
-            ConfigManager.FetchCompleted -= ApplyRemoteSettings;
-        }
-
-        [Obsolete("Obsolete")]
-        public void Init()
-        {
+            OnGetConfigSuccess += startGame;
             FetchOfferData();
             ItemsDictionary.Clear();
             OfferDataDictionary.Clear();
@@ -45,14 +41,16 @@ namespace RpgUITest
 
         private void ApplyRemoteSettings(ConfigResponse configResponse)
         {
+            
             if (configResponse.status == ConfigRequestStatus.Success)
             {
-                string json = ConfigManager.appConfig.GetJson("OfferData");
+                string json = ConfigManager.appConfig.GetJson("offerData");
                 if (!string.IsNullOrEmpty(json))
                 {
                     _offerData = JsonConvert.DeserializeObject<OfferData>(json);
                     Debug.Log($"Offer Title: {_offerData.Title}");
                     Debug.Log($"Discounted Price: {_offerData.DiscountedPrice}");
+                    OnGetConfigSuccess?.Invoke();
                 }
                 else
                 {
@@ -64,6 +62,11 @@ namespace RpgUITest
                 Debug.LogError("Failed to fetch Remote Config.");
             }
         }
-        
+
+        private void OnDestroy()
+        {
+            ConfigManager.FetchCompleted -= ApplyRemoteSettings;
+            OnGetConfigSuccess = null;
+        }
     }
 }
